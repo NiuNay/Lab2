@@ -21,9 +21,9 @@ public class Drawing extends Canvas {
     }
 
     private void setupShapes() {
-        circle=new Circle(new Point(200,200),new Color(0x992266),80);
-        rect=new Rect(new Point(100,100),new Color(0x922266),80, 30);
-        sqr=new Square(new Point(200,100),new Color(0x552266),80);
+        circle=new Circle(new Point(200,200),new Color(0x001155),80);
+        rect=new Rect(new Point(100,100),new Color(0x921155),80, 30);
+        sqr=new Square(new Point(200,100),new Color(0x551155),80);
     }
 
     private void setupCanvas() {
