@@ -7,7 +7,7 @@ import java.awt.*;
  * */
 
 
-public class Circle extends Shape {
+public class Circle extends Shape implements Drawable {
     private int rad; // Fields
 
     public Circle(Point initPos, Color col, int radius){

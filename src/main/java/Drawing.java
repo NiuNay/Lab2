@@ -1,10 +1,12 @@
 import Shapes.Circle;
 import Shapes.Rect;
 import Shapes.Square;
+import Shapes.Shape;
 
 import java.awt.*;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import java.util.ArrayList;
 
 public class Drawing extends Canvas {
     // A private field called f of class Frame. This is also in the AWT.
@@ -12,12 +14,16 @@ public class Drawing extends Canvas {
     private Circle circle;
     private Rect rect;
     private Square sqr;
+    ArrayList<Shape> shapes=new ArrayList<Shape>();
 
     // Constructor
     public Drawing() {
         setupShapes();
         setupFrame();
         setupCanvas();
+        shapes.add(circle);
+        shapes.add(rect);
+        shapes.add(sqr);
     }
 
     private void setupShapes() {
@@ -45,8 +51,8 @@ public class Drawing extends Canvas {
     }
 
     public void paint(Graphics g){ // WHEN DOES THIS EVER GET CALLED?
-        circle.draw(g);
-        rect.draw(g);
-        sqr.draw(g);
+        for (Shape s:shapes){
+            s.draw(g);
+        }
     }
 }
